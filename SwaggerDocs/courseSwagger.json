@@ -1,0 +1,54 @@
+{
+  "post": {
+    "summary": "Create a new course",
+    "tags": [
+      "Courses"
+    ],
+    "requestBody": {
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name of the course",
+                "example": "Introduction to Programming"
+              },
+              "hrdeb": {
+                "type": "string",
+                "description": "Start time",
+                "example": "09:00"
+              },
+              "hrfin": {
+                "type": "string",
+                "description": "End time",
+                "example": "11:00"
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "Course created"
+      },
+      "400": {
+        "description": "Invalid input"
+      }
+    }
+  },
+  "get": {
+    "summary": "Obtenir tous les cours",
+    "tags": [
+      "cours"
+    ],
+    "responses": {
+      "200": {
+        "description": "Liste des cours"
+      }
+    }
+  }
+}

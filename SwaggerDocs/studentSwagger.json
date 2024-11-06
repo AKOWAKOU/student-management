@@ -1,0 +1,54 @@
+{
+  "post": {
+    "summary": "Create a new student",
+    "tags": [
+      "Students"
+    ],
+    "requestBody": {
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "numInscription": {
+                "type": "string",
+                "description": "Student registration number",
+                "example": "2023-0001"
+              },
+              "nom": {
+                "type": "string",
+                "description": "Name of the student",
+                "example": "Alice"
+              },
+              "prenom": {
+                "type": "string",
+                "description": "First name of the student",
+                "example": "Smith"
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "Student created"
+      },
+      "400": {
+        "description": "Invalid input"
+      }
+    }
+  },
+  "get": {
+    "summary": "Obtenir tous les étudiants",
+    "tags": [
+      "Étudiants"
+    ],
+    "responses": {
+      "200": {
+        "description": "Liste des étudiants"
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "post": {
+    "summary": "Create a new professor",
+    "tags": [
+      "Professors"
+    ],
+    "requestBody": {
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "nom": {
+                "type": "string",
+                "description": "Name of the professor",
+                "example": "John Doe"
+              },
+              "prenom": {
+                "type": "string",
+                "description": "First name of the professor",
+                "example": "John"
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "Professor created"
+      },
+      "400": {
+        "description": "Invalid input"
+      }
+    }
+  },
+  "get": {
+    "summary": "Obtenir tous les étudiants",
+    "tags": [
+      "professors"
+    ],
+    "responses": {
+      "200": {
+        "description": "Liste des professeurs"
+      }
+    }
+  }
+}

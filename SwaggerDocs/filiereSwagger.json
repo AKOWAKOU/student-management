@@ -1,0 +1,44 @@
+{
+  "post": {
+    "summary": "Create a new field",
+    "tags": [
+      "Filières"
+    ],
+    "requestBody": {
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "libfil": {
+                "type": "string",
+                "description": "Name of the field",
+                "example": "Computer Science"
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "Field created"
+      },
+      "400": {
+        "description": "Invalid input"
+      }
+    }
+  },
+  "get": {
+    "summary": "Obtenir tous les filieres",
+    "tags": [
+      "filieres"
+    ],
+    "responses": {
+      "200": {
+        "description": "Liste des filieres"
+      }
+    }
+  }
+}

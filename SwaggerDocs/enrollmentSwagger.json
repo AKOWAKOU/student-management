@@ -1,0 +1,55 @@
+{
+  "post": {
+    "summary": "Create a new enrollment",
+    "tags": [
+      "Enrollments"
+    ],
+    "requestBody": {
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "studentId": {
+                "type": "string",
+                "description": "ID of the student",
+                "example": "603d7c2f0c4f5f1a6c98b933"
+              },
+              "courseId": {
+                "type": "string",
+                "description": "ID of the course",
+                "example": "603d7c2f0c4f5f1a6c98b934"
+              },
+              "dateInscription": {
+                "type": "string",
+                "format": "date",
+                "description": "Enrollment date",
+                "example": "2024-11-04"
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "Enrollment created"
+      },
+      "400": {
+        "description": "Invalid input"
+      }
+    }
+  },
+  "get": {
+    "summary": "Obtenir tous les enrollments",
+    "tags": [
+      "enrollments"
+    ],
+    "responses": {
+      "200": {
+        "description": "Liste des enrollments"
+      }
+    }
+  }
+}

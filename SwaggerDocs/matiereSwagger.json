@@ -1,0 +1,49 @@
+{
+  "post": {
+    "summary": "Create a new subject",
+    "tags": [
+      "Matières"
+    ],
+    "requestBody": {
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "libmat": {
+                "type": "string",
+                "description": "Name of the subject",
+                "example": "Mathematics"
+              },
+              "coef": {
+                "type": "number",
+                "description": "Coefficient",
+                "example": 3
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "Subject created"
+      },
+      "400": {
+        "description": "Invalid input"
+      }
+    }
+  },
+  "get": {
+    "summary": "Obtenir tous les matieres",
+    "tags": [
+      "matieres"
+    ],
+    "responses": {
+      "200": {
+        "description": "Liste des matieres"
+      }
+    }
+  }
+}
